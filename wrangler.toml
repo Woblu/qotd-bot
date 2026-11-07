@@ -1,0 +1,18 @@
+name = "qotd-bot"
+main = "src/worker.js"
+compatibility_date = "2025-09-01"
+workers_dev = true
+
+# Check every minute whether it's time for the daily ping (Cloudflare cron times are UTC;
+# the bot converts to your TIMEZONE itself, so daylight saving is handled).
+[triggers]
+crons = ["* * * * *"]
+
+# Where the rotation and question number are saved. `npm run deploy` fills in the ID the first time.
+[[d1_databases]]
+binding = "DB"
+database_name = "qotd-bot"
+database_id = ""
+
+[observability]
+enabled = true

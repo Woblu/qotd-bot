@@ -1,0 +1,17 @@
+{
+  "name": "qotd-bot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pings the staff member whose turn it is for Question of the Day, with the template ready to copy. Runs free on Cloudflare Workers.",
+  "type": "module",
+  "scripts": {
+    "deploy": "node --env-file=.env scripts/deploy.mjs",
+    "logs": "wrangler tail"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "^4.158.0"
+  }
+}

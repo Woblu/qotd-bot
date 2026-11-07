@@ -1,0 +1,4 @@
+{role}  **__Question {number}__**
+**Your question here**
+
+Discuss in the attached thread and if you want to get pinged, collect the role in <id:customize>
